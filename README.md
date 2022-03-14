@@ -1,2 +1,2 @@
 # Loan-Prediction-System
-A machine-learning model predicting the loan-eligibility of applicants based on the factors asked while filling a loan application.
+![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/1.LOAN%20PREDICTION%20SYSTEM.jpeg)
