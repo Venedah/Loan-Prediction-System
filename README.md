@@ -51,10 +51,47 @@ The above bar plots show :
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/4.%20Univariate%20Analysis_2.png)
 
 The above bar plots can be used to draw the following conclusions: 
+
     1. The majority of the applicants have no dependents. 
+
     2. Graduates make up about 80% of the applications. 
+    
     3. The majority of applicants are from the Semiurban area.
+
 Probability density maps can be used to visualize the distribution of numerical data.
 
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/5.%20Univariate%20Analysis_3.png)
 The boxplot verifies the presence of a lot of extreme values/outliers, and it can be extrapolated that most of the data in the distribution of applicant income is towards the left, which is not normally distributed. This can be attributable to the society's income disparity.
+
+### 2. Bivariate Analysis:
+We examine each variable with respect to target variable.
+![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/6.%20Bivariate%20Analysis.jpg)
+
+The above bar charts can be used to get the following conclusions: 
+    1. It appears that those having a credit score of 1 are more likely to be approved for loans.
+
+    2. When compared to rural and urban areas, the proportion of loans authorized in semi-urban areas is higher. 
+    
+    3. The proportion of married applicants who are authorized for loans is greater. 
+    
+    4. For both approved and unapproved loans, the ratio of male and female applicants is roughly the same.
+
+### 3. Correlation Plot:
+The correlation between all numerical variables is depicted in the heatmap below. The variable with a darker color indicates their correlation is more.
+![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/7.Correlation.png)
+We can see that (Applicant Income – Loan Amount) and (Credit History – Loan Status) are the most correlated variables. LoanAmount and CoapplicantIncome are also correlated.
+
+# Data Preprocessing
+The quality of the model's inputs will determine the quality of the output. The data was pre-processed in the following steps before being fed into the prediction model.
+
+    1. Missing Value Attribution
+    We may now impute missing values and treat outliers after we've figured out all of the variables in the data, because missing data and outliers might hurt the model's performance.
+
+    We look at the following values in each characteristic one at a time.
+    We impute categorical variables using mode.     
+    For numerical variables:Imputation using the mean or median because it is clear from Exploratory Data Analysis that the loan amount has outliers. 
+    We used the median to impute the missing values. 
+    The mean would not be the best technique because it is heavily influenced by the presence of outliers.
+
+    2. Treatment of Outliers
+    LoanAmount is biased to the right because it contains outliers. The log transformation is one approach to get rid of the skewness. As a result, we get a distribution that resembles the normal distribution and reduces the higher values while having little effect on the smaller ones.
