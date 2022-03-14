@@ -6,3 +6,5 @@ Banks' primary business is lending. The main source of profit is the interest on
 
     1. What is the borrower's risk level?
     2. Should we lend to the borrower, given his/her risk?
+
+In the current era, banks' data science teams use machine learning to construct predictive models to estimate how likely a client is to default on a loan when they only know a few pieces of information. Loan Prediction is a relatively prevalent real-life issue that every retail bank will confront at some point throughout its existence. It can save a lot of man hours at the end of a retail bank if done correctly.
