@@ -50,6 +50,11 @@ The above bar plots show :
 
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/4.%20Univariate%20Analysis_2.png)
 
-The above bar plots can be used to draw the following conclusions: • The majority of the applicants have no dependents. • Graduates make up about 80% of the applications. • The majority of applicants are from the Semiurban area.
+The above bar plots can be used to draw the following conclusions: 
+    1. The majority of the applicants have no dependents. 
+    2. Graduates make up about 80% of the applications. 
+    3. The majority of applicants are from the Semiurban area.
 Probability density maps can be used to visualize the distribution of numerical data.
+
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/5.%20Univariate%20Analysis_3.png)
+The boxplot verifies the presence of a lot of extreme values/outliers, and it can be extrapolated that most of the data in the distribution of applicant income is towards the left, which is not normally distributed. This can be attributable to the society's income disparity.
