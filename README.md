@@ -81,7 +81,7 @@ The correlation between all numerical variables is depicted in the heatmap below
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/7.Correlation.png)
 We can see that (Applicant Income – Loan Amount) and (Credit History – Loan Status) are the most correlated variables. LoanAmount and CoapplicantIncome are also correlated.
 
-# Data Preprocessing
+# Preprocessing of Data:
 The quality of the model's inputs will determine the quality of the output. The data was pre-processed in the following steps before being fed into the prediction model.
 
     1. Missing Value Attribution
