@@ -36,9 +36,13 @@ The exploratory data analysis is divided into two categories:
 
 ### 1. Univariate Analysis:
 We took a look at each variable separately. Then, we utilize frequency tables or bar plots to calculate the number of each category in a variable for categorical features.
-[alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/3.%20Univariate%20Analysis_1.png)
+![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/3.%20Univariate%20Analysis_1.png)
 
 The above bar plots show : 
     1. Males account for 80% of the applicants in the dataset. 
+
     2. Almost 65 percent of the candidates are married. 
-    3. Self-employed candidates make up about 15% of the applicants in the database. 4. Approximately 85% of applicants have paid off their debts.
+
+    3. Self-employed candidates make up about 15% of the applicants in the database.
+    
+    4. Approximately 85% of applicants have paid off their debts.
