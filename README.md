@@ -118,5 +118,7 @@ We can think of new characteristics that might affect the target variable based 
 
 # Model Building:
 In this case, StratifiedShuffleSplit is employed as a cross validation technique.
-This cross-validation technique has the advantage of combining StratifiedKFold with ShuffleSplit to produce stratified randomized folds. The folds are created by keeping track of the percentage of samples in each class.
-We can continue the model-building process after adding new features. As a result, we started with a logistic regression model and progress to more complex models such as Decision Tree, Random Forest, and XGBoost.
+This cross-validation technique has the advantage of combining StratifiedKFold with ShuffleSplit to produce stratified randomized folds. 
+The folds are created by keeping track of the percentage of samples in each class.
+We can continue the model-building process after adding new features. 
+As a result, we started with a logistic regression model and progress to more complex models such as Decision Tree, Random Forest, and XGBoost.
