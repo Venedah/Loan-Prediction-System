@@ -122,3 +122,21 @@ This cross-validation technique has the advantage of combining StratifiedKFold w
 The folds are created by keeping track of the percentage of samples in each class.
 We can continue the model-building process after adding new features. 
 As a result, we started with a logistic regression model and progress to more complex models such as Decision Tree, Random Forest, and XGBoost.
+
+The best predictions are produced by Logistic Regression Model, with an F-1 Score of 82 percent, after trying and testing four alternative algorithms.
+
+To get this result, the following steps were taken:
+
+    1. Investigated the dataset to gain a better understanding of the information.
+
+    2. Use various statistical significance tests to find hidden data associations that our predictive model can learn from and use to anticipate unknown events.
+
+    3. I Used statistical analysis and a variety of Python packages to determine the quantity and names of features that could aid in identifying potential clients and predicting whether or not a loan would be accepted.
+
+# Future Improvements:
+
+    1. In upcoming years, as the new data keeps coming in, it will be important for data science team to deal with missing values, imbalanced data sets and additional features.
+
+    2. It is important to notice this fact that the default loans are only about 10% of the total loans, thus during the training process, the model will favor predicting more negatives than positive results.
+
+    3. The models can also be improved further by fine tunings on hyperparameters or using ensemble methods such as bagging, boosting, and stacking.
