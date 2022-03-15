@@ -1,7 +1,7 @@
 # Loan-Prediction-System
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/1.LOAN%20PREDICTION%20SYSTEM.jpeg)
 
-## Problem Statement
+## Problem Statement:
 A banks' primary business is lending. The main source of profit is the interest on the loan. After an extensive verification and validation process, the loan companies grant a loan. They do not, however, have assurance that the applicant will be able to repay the loan without difficulty. In the lending industry, the two most important questions are:
 
     1. What is the borrower's risk level?
@@ -9,10 +9,10 @@ A banks' primary business is lending. The main source of profit is the interest 
 
 In the current era, banks' data science teams use machine learning to construct predictive models to estimate how likely a client is to default on a loan when they only know a few pieces of information. Loan Prediction is a relatively prevalent real-life issue that every retail bank will confront at some point throughout its existence. It can save a lot of man hours at the end of a retail bank if done correctly.
 
-## Goal of the Project
+## Goal of the Project:
 A company that deals in home loans needs to automate the loan eligibility process (real time) based on customer details provided while filling online application form. To automate this process, we have been given a problem to identify the customers’ segments, those that  eligible for loan amount so that they can specifically target these customers. The goal of this project is to predict whether a loan would be approved or not.
 
-## Hypothesis Generation
+## Hypothesis Generation:
 The following are some of the elements that I believe can influence Loan Approval (the dependent variable in this loan prediction problem):
 
     1.Salary: An applicant with a high salary should have a better probability of getting a loan.
@@ -25,7 +25,7 @@ The following are some of the elements that I believe can influence Loan Approva
 
     5. EMI: The lower the monthly repayment amount, the more likely the loan will be approved.
 
-## Data Sources
+## Data Sources:
 We got two CSV files for this problem: train and test. The train file will be used to train the model, which means that our model will learn from it. All of the independent variables are included, as well as the target variable. The independent variables are all present in the test file, but not the target variable. For the test data, we'll use the model to forecast the target variable. Each variable's description and data type are listed below.
 ![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/2.%20Data%20Dictionary.png)
 
@@ -95,3 +95,28 @@ The quality of the model's inputs will determine the quality of the output. The 
 
     2. Treatment of Outliers
     LoanAmount is biased to the right because it contains outliers. The log transformation is one approach to get rid of the skewness. As a result, we get a distribution that resembles the normal distribution and reduces the higher values while having little effect on the smaller ones.
+![alt text](https://github.com/Venedah/Loan-Prediction-System/blob/main/Images/8.%20Outlier%20Treatment.png)
+
+The LoanAmount distribution now resembles that of a normal distribution, with the effect of extreme numbers greatly reduced.
+
+# Building the Baseline Model:
+To predict the loan status, We used a basic logistic regression model over the baseline model. The training data is split into two sets: training and validation. As we have the true predictions for the validation part, we may validate our predictions this way. The accuracy of the baseline logistic regression model is 84 percent. The F-1 score derived from the classification report is 82 percent.
+
+# Feature Engineering:
+We can think of new characteristics that might affect the target variable based on domain expertise. Following are three new features that we can think of:
+
+    1. Total Income
+    We will combine the applicant and coapplicant incomes, as indicated by Exploratory Data Analysis. If your total salary is high, you may have a better chance of getting a loan.
+
+    2. EMI
+    The EMI is the amount that the borrower must pay each month to repay the loan. The reason for include this variable is that consumers with high EMIs may find it difficult to repay their loans. We may compute EMI by multiplying the loan amount by the period of the loan.
+
+    3. Balanced Income
+    After the EMI is paid, this is the remaining income. The idea behind this variable is that if the value is high, a person is more likely to repay the loan, increasing the likelihood of loan acceptance.
+
+    Let's get rid of the columns we used to make these new features. The reason for this is that the correlation between the old and new features will be extremely high, whereas logistic regression implies that the variables are not highly associated. We also want to get rid of the noise in the data, so deleting linked features will help with that.
+
+# Model Building:
+In this case, StratifiedShuffleSplit is employed as a cross validation technique.
+This cross-validation technique has the advantage of combining StratifiedKFold with ShuffleSplit to produce stratified randomized folds. The folds are created by keeping track of the percentage of samples in each class.
+We can continue the model-building process after adding new features. As a result, we started with a logistic regression model and progress to more complex models such as Decision Tree, Random Forest, and XGBoost.
